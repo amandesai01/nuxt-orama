@@ -1,6 +1,9 @@
 <template>
   <div>
-    <input type="text" v-model="searchInput">
+    <input
+      v-model="searchInput"
+      type="text"
+    >
     {{ JSON.stringify(orama.searchResults.value) }}
   </div>
 </template>
@@ -11,7 +14,7 @@ const searchInput = ref("");
 const orama = useOramaSearch();
 
 watchEffect(() => {
-  if(searchInput.value) {
+  if (searchInput.value) {
     orama.search({
       term: searchInput.value,
     })

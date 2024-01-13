@@ -1,4 +1,4 @@
-import { insertMultiple as insertMultipleOrama, search as searchOrama, type PartialSchemaDeep, type Results, type SearchParams, type TypedDocument } from "@orama/orama";
+import { insertMultiple as insertMultipleOrama, search as searchOrama, type PartialSchemaDeep, type Results, type SearchParams } from "@orama/orama";
 import { useNuxtApp } from "nuxt/app";
 import { DEFAULT_KEY } from "../../constants";
 import type { NuxtOramaProvider } from "../../interfaces";
