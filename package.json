@@ -1,6 +1,6 @@
 {
   "name": "nuxt-orama",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Nuxt module for first-class integration with OramaSearch.",
   "repository": "amandesai01/nuxt-orama",
   "license": "MIT",
