@@ -23,7 +23,7 @@ Nuxt module for first-class integration with OramaSearch. for doing amazing thin
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
+- ⛰ &nbsp;Access a search DB everywhere
 - 🚠 &nbsp;Bar
 - 🌲 &nbsp;Baz
 

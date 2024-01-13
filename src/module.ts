@@ -1,19 +1,25 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit'
+import type { CreateAnyOramaArguments } from './interfaces';
 
 // Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  schemas: CreateAnyOramaArguments[],
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-orama',
-    configKey: 'myModule'
+    configKey: 'orama'
   },
-  // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    schemas: [],
+  },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    nuxt.options.runtimeConfig.public.orama = options;
+
+    addPlugin(resolver.resolve('./runtime/plugin'));
+    addImportsDir(resolver.resolve('./runtime/composables'));
   }
 })
