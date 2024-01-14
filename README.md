@@ -1,3 +1,5 @@
+![nuxt-orama](./docs/cover.png)
+
 # Nuxt Orama
 
 [![npm version][npm-version-src]][npm-version-href]
