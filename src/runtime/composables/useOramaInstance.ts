@@ -8,9 +8,9 @@ export default function useOramaInstance(id?: string) {
 
   const provider: NuxtOramaProvider = nuxtApp.$nuxtOrama as NuxtOramaProvider;
 
-  const oramaDB = provider.oramaDBRecord[key];
+  const oramaInstance = provider.oramaInstanceRecord[key];
 
-  if (!oramaDB) {
+  if (!oramaInstance) {
     if (key == DEFAULT_KEY) {
       throw new Error(`No Orama instance initialsed. Either provide atleast one schema in config, or make sure to create an instance first.`);
     } else {
@@ -18,5 +18,5 @@ export default function useOramaInstance(id?: string) {
     }
   }
 
-  return oramaDB;
+  return oramaInstance;
 }

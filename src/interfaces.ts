@@ -11,6 +11,6 @@ export interface CreateAnyOramaArguments<OramaSchema = any, TIndex = any, TDocum
 }
 
 export interface NuxtOramaProvider {
-  oramaDBRecord: Record<string, AnyOrama>,
+  oramaInstanceRecord: Record<string, AnyOrama>,
   createOramaInstance: (createArgs: CreateAnyOramaArguments) => Promise<AnyOrama>;
 }

@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from '#app'
-import { create as createOramaDB, type AnyOrama } from '@orama/orama';
+import { create as createoramaInstance, type AnyOrama } from '@orama/orama';
 import type { CreateAnyOramaArguments, NuxtOramaProvider } from '../interfaces';
 import { DEFAULT_KEY } from '../constants';
 
@@ -9,18 +9,18 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     return;
   }
 
-  const oramaDBRecord: Record<string, AnyOrama> = {};
+  const oramaInstanceRecord: Record<string, AnyOrama> = {};
 
   const createOramaInstance = async (createArgs: CreateAnyOramaArguments): Promise<AnyOrama> => {
     const id = createArgs.id || DEFAULT_KEY;
 
-    if (oramaDBRecord[id]) {
+    if (oramaInstanceRecord[id]) {
       console.warn(`[nuxt-orama] DB with id ${id} already exists. Overriding it.`)
     }
 
-    oramaDBRecord[id] = await createOramaDB(createArgs);
+    oramaInstanceRecord[id] = await createoramaInstance(createArgs);
 
-    return oramaDBRecord[id];
+    return oramaInstanceRecord[id];
   }
 
   const createArgs = (useRuntimeConfig().public.orama as any).schemas as CreateAnyOramaArguments[];
@@ -31,7 +31,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   }
 
   const nuxtOramaProvider: NuxtOramaProvider = {
-    oramaDBRecord,
+    oramaInstanceRecord,
     createOramaInstance,
   }
 
