@@ -1,7 +1,10 @@
 <template>
   <div>
     <p>Search Query</p>
-    <input v-model="searchInput" type="text">
+    <input
+      v-model="searchInput"
+      type="text"
+    >
     <hr>
     <p>Search Results:</p>
     <table>
@@ -13,8 +16,14 @@
           <th>Last Name</th>
         </tr>
       </thead>
-      <tbody id="userTableBody" v-if="searchResults">
-        <tr v-for="result in searchResults.hits">
+      <tbody
+        v-if="searchResults"
+        id="userTableBody"
+      >
+        <tr
+          v-for="result in searchResults.hits"
+          :key="result.id"
+        >
           <td>{{ result.document.id }}</td>
           <td>{{ result.document.username }}</td>
           <td>{{ result.document.user.firstName }}</td>
