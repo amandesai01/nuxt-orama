@@ -1,25 +1,10 @@
 import { insertMultiple as insertMultipleOrama, search as searchOrama, type PartialSchemaDeep, type Results, type SearchParams } from "@orama/orama";
-import { useNuxtApp } from "nuxt/app";
-import { DEFAULT_KEY } from "../../constants";
-import type { NuxtOramaProvider } from "../../interfaces";
 import { wrapPromiseToRef } from "../../utils";
 import { ref, type Ref } from "#imports";
+import useOramaInstance from "./useOramaInstance";
 
 export default function useOramaSearch(id?: string) {
-  const key = id || DEFAULT_KEY;
-  const nuxtApp = useNuxtApp();
-
-  const provider: NuxtOramaProvider = nuxtApp.$nuxtOrama as NuxtOramaProvider;
-
-  const oramaDB = provider.oramaDBRecord[key];
-
-  if (!oramaDB) {
-    if (key == DEFAULT_KEY) {
-      throw new Error(`No Orama instance initialsed. Either provide atleast one schema in config, or make sure to create an instance first.`);
-    } else {
-      throw new Error(`No Orama instance found for id ${key}. Make sure you create one first.`);
-    }
-  }
+  const oramaDB = useOramaInstance(id);
 
   const searchResults: Ref<Results<any> | null> = ref(null);
   const searchPending: Ref<boolean> = ref(false);
