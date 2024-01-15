@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.4...v0.0.5)
+
+### 🩹 Fixes
+
+- Rearrange files to be included in bundle ([36c4312](https://github.com/amandesai01/nuxt-orama/commit/36c4312))
+- Issue where runtimeConfig not bundled ([bfdc7d8](https://github.com/amandesai01/nuxt-orama/commit/bfdc7d8))
+
+### 🏡 Chore
+
+- **release:** V0.0.4 ([c3f6354](https://github.com/amandesai01/nuxt-orama/commit/c3f6354))
+
+### ❤️ Contributors
+
+- Amandesai01 <amandesai01@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.3...v0.0.4)
