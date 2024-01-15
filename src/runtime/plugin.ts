@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { create as createoramaInstance, type AnyOrama } from '@orama/orama';
 import type { CreateAnyOramaArguments, NuxtOramaProvider } from './interfaces';
 import { DEFAULT_KEY } from './constants';
