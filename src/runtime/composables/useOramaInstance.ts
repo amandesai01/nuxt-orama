@@ -1,6 +1,6 @@
 import { useNuxtApp } from "nuxt/app";
-import { DEFAULT_KEY } from "../../constants";
-import type { NuxtOramaProvider } from "../../interfaces";
+import { DEFAULT_KEY } from "../constants";
+import type { NuxtOramaProvider } from "../interfaces";
 
 export default function useOramaInstance(id?: string) {
   const key = id || DEFAULT_KEY;

@@ -5,7 +5,7 @@ import {
   type Results,
   type SearchParams,
 } from "@orama/orama";
-import { wrapPromiseToRef } from "../../utils";
+import { wrapPromiseToRef } from "../utils";
 import { ref, type Ref } from "#imports";
 import useOramaInstance from "./useOramaInstance";
 

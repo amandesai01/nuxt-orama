@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from '#app'
 import { create as createoramaInstance, type AnyOrama } from '@orama/orama';
-import type { CreateAnyOramaArguments, NuxtOramaProvider } from '../interfaces';
-import { DEFAULT_KEY } from '../constants';
+import type { CreateAnyOramaArguments, NuxtOramaProvider } from './interfaces';
+import { DEFAULT_KEY } from './constants';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   // Skip plugin when rendering error page

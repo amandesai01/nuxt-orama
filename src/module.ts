@@ -1,5 +1,5 @@
 import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit'
-import type { CreateAnyOramaArguments } from './interfaces';
+import type { CreateAnyOramaArguments } from './runtime/interfaces';
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
