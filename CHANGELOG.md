@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.3...v0.0.4)
+
+### 🩹 Fixes
+
+- Rearrange files to be included in bundle ([36c4312](https://github.com/amandesai01/nuxt-orama/commit/36c4312))
+
+### 📖 Documentation
+
+- Update docs with cover ([751d5fa](https://github.com/amandesai01/nuxt-orama/commit/751d5fa))
+
+### 🏡 Chore
+
+- **release:** V0.0.3 ([8fb0cb4](https://github.com/amandesai01/nuxt-orama/commit/8fb0cb4))
+- Lint ([903229b](https://github.com/amandesai01/nuxt-orama/commit/903229b))
+
+### ❤️ Contributors
+
+- Amandesai01 <amandesai01@gmail.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.2...v0.0.3)
