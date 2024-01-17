@@ -25,11 +25,15 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.1",
-    "@orama/orama": "^2.0.0-beta.12"
+    "@orama/orama": "^2.0.0-beta.12",
+    "vitepress": "1.0.0-rc.31"
   },
   "resolutions": {
     "string-width": "4.2.3"

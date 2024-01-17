@@ -1,4 +1,4 @@
-![nuxt-orama](./docs/cover.png)
+![nuxt-orama](./docs/public/cover.png)
 
 # Nuxt Orama
 
