@@ -32,8 +32,10 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.1",
-    "@orama/orama": "^2.0.0-beta.12",
     "vitepress": "1.0.0-rc.31"
+  },
+  "peerDependencies": {
+    "@orama/orama": "^2.0.21"
   },
   "resolutions": {
     "string-width": "4.2.3"
