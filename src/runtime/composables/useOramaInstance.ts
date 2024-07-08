@@ -1,8 +1,9 @@
 import { useNuxtApp } from "nuxt/app";
 import { DEFAULT_KEY } from "../constants";
 import type { NuxtOramaProvider } from "../interfaces";
+import type { AnyOrama } from "@orama/orama";
 
-export default function useOramaInstance(id?: string) {
+export default function useOramaInstance<T extends AnyOrama>(id?: string) {
   const key = id || DEFAULT_KEY;
   const nuxtApp = useNuxtApp();
 
@@ -18,5 +19,5 @@ export default function useOramaInstance(id?: string) {
     }
   }
 
-  return oramaInstance;
+  return oramaInstance as T;
 }

@@ -9,8 +9,8 @@ import { wrapPromiseToRef } from "../utils";
 import { ref, type Ref } from "#imports";
 import useOramaInstance from "./useOramaInstance";
 
-export default function useOramaSearch(id?: string) {
-  const oramaInstance = useOramaInstance(id);
+export default function useOramaSearch<T extends AnyOrama>(id?: string) {
+  const oramaInstance = useOramaInstance<T>(id);
 
   const searchResults: Ref<Results<any> | null> = ref(null);
   const searchPending: Ref<boolean> = ref(false);
@@ -35,14 +35,14 @@ export default function useOramaSearch(id?: string) {
   };
 
   const insertMultipleWrapped = (
-    docs: PartialSchemaDeep<any>[],
+    docs: PartialSchemaDeep<TypedDocument<T>>[],
     batchSize?: number,
     language?: string,
     skipHooks?: boolean,
     timeout?: number
   ) => {
     return wrapPromiseToRef(
-      insertMultipleOrama(
+      insertMultipleOrama<T>(
         oramaInstance,
         docs,
         batchSize,
