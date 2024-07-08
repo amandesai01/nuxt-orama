@@ -1,5 +1,5 @@
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import { create as createoramaInstance, type AnyOrama } from '@orama/orama';
+import { create as createOrama, type AnyOrama } from '@orama/orama';
 import type { CreateAnyOramaArguments, NuxtOramaProvider } from './interfaces';
 import { DEFAULT_KEY } from './constants';
 
@@ -18,7 +18,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       console.warn(`[nuxt-orama] DB with id ${id} already exists. Overriding it.`)
     }
 
-    oramaInstanceRecord[id] = await createoramaInstance(createArgs);
+    oramaInstanceRecord[id] = await createOrama(createArgs);
 
     return oramaInstanceRecord[id];
   }
