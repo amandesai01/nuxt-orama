@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v1.0.0
+
+[compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.5...v1.0.0)
+
+### 🚀 Enhancements
+
+- Better typesafety ([0e8fc75](https://github.com/amandesai01/nuxt-orama/commit/0e8fc75))
+- Added remaining utils: `update`, `remove`, `getById`, `count` ([bb7c675](https://github.com/amandesai01/nuxt-orama/commit/bb7c675))
+
+### 📖 Documentation
+
+- Vitepress init ([3f6713e](https://github.com/amandesai01/nuxt-orama/commit/3f6713e))
+
+### 🏡 Chore
+
+- **release:** V0.0.5 ([b03bf12](https://github.com/amandesai01/nuxt-orama/commit/b03bf12))
+- Refactor naming ([8bc99d2](https://github.com/amandesai01/nuxt-orama/commit/8bc99d2))
+- **docs:** Update target ([4514d46](https://github.com/amandesai01/nuxt-orama/commit/4514d46))
+
+### ❤️ Contributors
+
+- Amandesai01 <amandesai01@gmail.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com/amandesai01/nuxt-orama/compare/v0.0.4...v0.0.5)
