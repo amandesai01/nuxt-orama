@@ -81,8 +81,8 @@ watchEffect(() => {
 
 ## Roadmap
 - [x] Wrap around `search` and `insertMultiple`
+- [x] Wrap around other functions such for `update`, `remove`
 - [ ] Hooks for plugins to insert data during indexing
-- [ ] Wrap around other functions such for `update`, `remove`
 - [ ] Types generation for schemas.
 - [ ] Separate `orama.config.ts` file to not populate Nuxt config.
 
